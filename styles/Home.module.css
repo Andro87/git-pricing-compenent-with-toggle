@@ -1,5 +1,4 @@
 .wrap{
-  border:1px solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,14 +9,12 @@
 }
 
 .info{
-  border:1px solid red;
   width: 100%;
   text-align: center;
   margin-bottom: 60px;
 }
 
 .track{
-  border: 1px solid magenta;
   color:hsl(234, 14%, 74%);
   display: flex;
   justify-content: center;
@@ -27,7 +24,6 @@
 }
 
 .toggle{
-  border: 1px solid black;
   margin: 0 25px;
 }
 
@@ -44,7 +40,6 @@
   border-radius:30px;
   color: transparent;
   user-select: none;  
-  border: 1px solid red;
   background:linear-gradient( to right, hsl(236, 72%, 79%) , hsl(237, 63%, 64%));
 }
 
@@ -52,48 +47,47 @@
   content: "";
   position: absolute;
   cursor: pointer;
-  left: 0;
-  width: 24px;
-  height: 24px;
+  left: 3px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   background-color:white;
   -webkit-transition: left 0.25s linear;
   transition: left 0.25s linear;
-  border: 1px solid yellow;
 }
 
 .input:checked + .label{
-  background: hsl(236, 77%, 83%);
+  background: hsl(236, 64%, 87%);
 }
 
 .input:checked + .label::after {
-  left:38px;     
+  left:40px;     
 }                      
 
 .container{
-  border: 1px solid olive;
   width: 100%;
   max-width: 1440px;
   display: flex;
 }
 
+.container p{
+  padding:20px 0;
+  text-align: center;
+}
+
 .money{
   display: flex;
   align-items: center;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   color: hsl(232, 13%, 33%);
 }
 
 .price{
-  font-size: 5rem;
+  font-size:clamp(2rem,4vw,5rem);
   margin: 15px 0;
   color: hsl(232, 13%, 33%);
   margin-left: 10px;
-}
-
-.container p{
-  padding:20px 0;
-  text-align: center;
+  word-wrap: anywhere;
 }
 
 
@@ -111,7 +105,7 @@
 .attribution a { color: hsl(228, 45%, 44%); }
 
 
-@media only screen and (max-width:480px){
+@media only screen and (max-width:920px){
 
   .wrap{
     padding: 80px 25px;
@@ -121,10 +115,12 @@
   }
   
   .container{
-    display: block;
+    flex-direction: column;
   }
- 
+
 }
+
+
 
 
 
