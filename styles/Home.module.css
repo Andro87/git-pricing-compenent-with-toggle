@@ -1,122 +1,130 @@
-.container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
+.wrap{
+  border:1px solid black;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-self:center;
+  padding: 80px 110px;
+  background: url("../public/images/bg-top.svg") top right,url("../public/images/bg-bottom.svg") bottom left,hsl(240, 78%, 98%);
+  background-repeat: no-repeat;
 }
 
-.main {
-  padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer {
+.info{
+  border:1px solid red;
   width: 100%;
-  height: 100px;
-  border-top: 1px solid #eaeaea;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.track{
+  border: 1px solid magenta;
+  color:hsl(234, 14%, 74%);
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 55px;
+  font-size: 1.2rem;
 }
 
-.footer img {
-  margin-left: 0.5rem;
+.toggle{
+  border: 1px solid black;
+  margin: 0 25px;
 }
 
-.footer a {
+.input{
+  display: none;
+}
+
+.label{
   display: flex;
-  justify-content: center;
   align-items: center;
+  position: relative;                
+  width:65px;
+  height: 26px;
+  border-radius:30px;
+  color: transparent;
+  user-select: none;  
+  border: 1px solid red;
+  background:linear-gradient( to right, hsl(236, 72%, 79%) , hsl(237, 63%, 64%));
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.label::after {
+  content: "";
+  position: absolute;
+  cursor: pointer;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color:white;
+  -webkit-transition: left 0.25s linear;
+  transition: left 0.25s linear;
+  border: 1px solid yellow;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.input:checked + .label{
+  background: hsl(236, 77%, 83%);
 }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+.input:checked + .label::after {
+  left:38px;     
+}                      
+
+.container{
+  border: 1px solid olive;
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
 }
 
-.title,
-.description {
+.money{
+  display: flex;
+  align-items: center;
+  font-size: 3.5rem;
+  color: hsl(232, 13%, 33%);
+}
+
+.price{
+  font-size: 5rem;
+  margin: 15px 0;
+  color: hsl(232, 13%, 33%);
+  margin-left: 10px;
+}
+
+.container p{
+  padding:20px 0;
   text-align: center;
 }
 
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
+
+.line{
+  border-top:1px solid hsl(234, 14%, 74%);
+  width: 100%;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+.color{
+  color: hsl(240, 78%, 98%);
 }
 
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-  margin-top: 3rem;
-}
 
-.card {
-  margin: 1rem;
-  flex-basis: 45%;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-}
+.attribution { font-size: 11px; text-align: center;margin-top: 50px; }
+.attribution a { color: hsl(228, 45%, 44%); }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
 
-.card h3 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
+@media only screen and (max-width:480px){
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
+  .wrap{
+    padding: 80px 25px;
+    background: url("../public/images/bg-top.svg") 250% 0,hsl(240, 78%, 98%);
+    background-repeat: no-repeat;
+    
   }
+  
+  .container{
+    display: block;
+  }
+ 
 }
+
+
+

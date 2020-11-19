@@ -1,0 +1,33 @@
+.button{
+    outline: none;
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: "montserrat";
+    text-align: center;
+    margin: 15px 0;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+  
+.white{
+    color: hsl(237, 63%, 64%);
+    background-color: hsl(240, 78%, 98%);
+}
+
+.white:hover{
+    background-color:transparent;
+    color: hsl(240, 78%, 98%);
+    border: 1px solid hsl(240, 78%, 98%);
+}
+
+.blue{
+    background:linear-gradient( to right, hsl(236, 72%, 79%) , hsl(237, 63%, 64%));
+    color: hsl(240, 78%, 98%);
+}
+  
+.blue:hover{
+    background:transparent;
+    color: hsl(237, 63%, 64%);
+    border: 1px solid hsl(237, 63%, 64%);;
+}
