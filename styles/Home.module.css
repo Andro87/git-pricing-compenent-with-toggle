@@ -46,6 +46,7 @@
 .label::after {
   content: "";
   position: absolute;
+  left: 3px;
   cursor: pointer;
   left: 3px;
   width: 22px;
